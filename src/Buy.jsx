@@ -1,4 +1,3 @@
-import styles from './css/Buy.module.css'
 import { useState } from 'react'
 import { Link } from 'react-router'
 import { useLocation } from "react-router";
