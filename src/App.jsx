@@ -24,7 +24,7 @@ function App() {
 
 
   return (
-    <>
+    <>    
       <Routes>        
         <Route path="/" element={<><Menu /><Home /></>} />
         <Route path="/home" element={<><Menu /><Home /></>} />
