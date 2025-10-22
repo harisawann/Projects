@@ -37,7 +37,7 @@ const Slide = () => {
     ];
 
     return (
-        <div className="fixed top-0 left-2 right-2 z-[1000] bg-white rounded-[20px]">
+        <div className="fixed top-0 left-0 right-0 mx-[0px] z-[1000] bg-white rounded-[20px]">
             <div className="border border-lightslategray rounded-[20px] flex justify-between items-center px-2 shadow-[0px_1px_3px_1px_grey]">
 
                 <div>
