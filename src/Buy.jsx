@@ -36,27 +36,44 @@ const Buy = () => {
     }
 
     return (
-        <div className="mt-[120px] flex h-auto ">
-            <div className="border-2 border-black m-[50px] w-[50%] h-auto  rounded-[10px] p-[40px] ">
-                <h2 className="inline-block ml-[7px] font-sans text-lg font-light " >Delivery</h2>
+        <div className="mt-[120px] block lg:flex h-auto p-[10px] ">
+
+
+            <div className="border-2 border-black my-[15px] lg:m-[50px] w-full lg:w-[50%] h-auto  rounded-[10px] p-[40px]  flex bg-lightgray">
+                {product && (
+                    <div className="border-1 border-gray-400 rounded-[5px] m-auto ">
+                        <div className="flex items-center justify-center " >
+                            <img className="m-[10px] border-1 border-gray-500 rounded-xl h-[200px] w-[200px] " src={product.img} />
+                        </div>
+                        <div className=" w-fit block justify-center ">
+                            <div className=" block text-2xl h-auto w-auto m-[10px] p-[5px]">{product.name}</div>
+                            <div className=" block text-xl h-auto  m-[10px] p-[5px] ">{product.price}</div>
+                        </div>
+                    </div>
+                )}
+            </div>  
+
+
+            <div className="border-2 border-black mb-[10px] lg:m-[50px]  lg:w-[50%] w-[100%] h-auto rounded-[10px] p-[40px] ">
+                <h2 className="inline-block ml-[7px] font-sans text-2xl font-medium " >Delivery</h2>
                 <form onSubmit={handleSubmit}>
                     <select
-                        className="border-1 border-lightgray block h-[40px] w-98 rounded-[5px] my-[10px] justify-center  "
+                        className="border-1 border-lightgray block h-[40px] lg:w-100 w-full rounded-[5px] my-[10px] justify-center  "
                         value={country}
                         onChange={(e) => setCountry(e.target.value)}
                     >
                         <option>Pakistan</option>
                     </select>
 
-                    <div className="inline-flex w-100 my-[10px] ">
-                        <input
+                    <div className="lg:inline-flex inline-block lg:w-100 w-full my-[2px] justify-between ">
+                        <input className="border-1 border-gray-500 my-[5px] lg:my-[5px] rounded-[2px] p-[2px] w-full lg:w-fit "
                             type="text"
                             placeholder="First Name"
                             value={firstName}
                             onChange={(e) => setFirstName(e.target.value)}
                             required
                         />
-                        <input
+                        <input className="border-1 border-gray-500 my-[5px] lg:my-[5px] rounded-[2px] p-[2px] w-full lg:w-fit"
                             type="text"
                             placeholder="Last Name"
                             value={lastName}
@@ -65,15 +82,15 @@ const Buy = () => {
                         />
                     </div>
 
-                    <div className="w-100 my-[10px]">
-                        <input
+                    <div className="lg:w-100 w-full my-[2px] lg:inline-flex inline-block justify-between ">
+                        <input className="border-1 border-gray-500 my-[5px] lg:my-[5px] rounded-[2px] p-[2px] w-full lg:w-fit"
                             type="text"
                             placeholder="Address"
                             value={address}
                             onChange={(e) => setAddress(e.target.value)}
                             required
                         />
-                        <input
+                        <input className="border-1 border-gray-500 my-[5px] lg:my-[5px] rounded-[2px] p-[2px] w-full lg:w-fit"
                             type="text"
                             placeholder="Apartment (Optional)"
                             value={apartment}
@@ -81,15 +98,15 @@ const Buy = () => {
                         />
                     </div>
 
-                    <div className="w-100 my-[10px] flex ">
-                        <input
+                    <div className=" lg:w-100 w-full my-[2px] lg:inline-flex inline-block  justify-between ">
+                        <input className="border-1 border-gray-500 my-[5px] lg:my-[5px] rounded-[2px] p-[2px] w-full lg:w-fit"
                             type="text"
                             placeholder="City"
                             value={city}
                             onChange={(e) => setCity(e.target.value)}
                             required
                         />
-                        <input
+                        <input className="border-1 border-gray-500 my-[5px] lg:my-[5px] rounded-[2px] p-[2px] w-full lg:w-fit"
                             type="text"
                             placeholder="Postal code (Optional)"
                             value={postalCode}
@@ -97,8 +114,8 @@ const Buy = () => {
                         />
                     </div>
 
-                    <div className="w-100 my-[10px]">
-                        <input
+                    <div className="lg:w-100 w-full my-[2px]">
+                        <input className="border-1 border-gray-500 rounded-[2px] w-full  p-[2px]"
                             type="tel"
                             placeholder="Phone"
                             value={phone}
@@ -107,34 +124,24 @@ const Buy = () => {
                         />
                     </div>
 
-                    <h2 className="inline-block ml-[7px] font-sans text-lg font-light "  >Shipping method</h2><br/>
-                    <div className=" p-[5px] h-[30px] w-96 rounded-[5px] mx-[5px] my-[10px] inline-flex bg-[#caf0f846] border-1 border-[#0077b6] justify-between ">
+                    <h2 className="inline-block ml-[7px] font-sans text-2xl font-medium "  >Shipping method</h2><br />
+                    <div className=" p-[5px] h-[30px] lg:w-100 w-full rounded-[5px]  my-[10px] inline-flex bg-[#caf0f846] border-1 border-[#0077b6] justify-between ">
                         <p>Standard</p>
                         <p>Free</p>
-                    </div><br/>
+                    </div><br />
 
-                    <h2 className="inline-block ml-[7px] font-sans text-lg font-light ">Payment</h2><br/>
-                    <div className=" p-[5px] h-[30px] w-96 rounded-[5px] mx-[5px] my-[10px] inline-flex bg-[#caf0f846] border-1 border-[#0077b6] self-center ">
+                    <h2 className="inline-block ml-[7px] font-sans text-2xl font-medium ">Payment</h2><br />
+                    <div className=" p-[5px] h-[30px] lg:w-100 w-full rounded-[5px]  my-[10px] inline-flex bg-[#caf0f846] border-1 border-[#0077b6] self-center ">
                         <p>Cash On Delivery (COD)</p>
                     </div>
-                    <div className="p-[5px] h-[30px] w-96 rounded-[5px] mx-[5px] my-[10px] inline-flex bg-[#caf0f846] border-1 border-[#0077b6] self-center ">
+                    <div className="p-[5px] h-[30px] lg:w-100 w-full rounded-[5px]  my-[10px] inline-flex bg-[#caf0f846] border-1 border-[#0077b6] self-center ">
                         <p>Bank Details</p>
                     </div>
 
-                    <button type="submit" className="flex p-[5px] border-1 border-lightgray h-[35px] w-96 rounded-[5px] mx-[5px] my-[10px] bg-[#1565c0] text-white font-sans text-lg items-center  border-none justify-center hover:cursor-pointer hover:bg-[#0d47a1] ">
+                    <button type="submit" className="flex p-[5px] border-1 border-lightgray h-[35px] lg:w-100 w-full rounded-[5px] my-[10px] bg-[#1565c0] text-white font-sans text-lg items-center  border-none justify-center hover:cursor-pointer hover:bg-[#0d47a1] ">
                         Complete Order
                     </button>
                 </form>
-            </div>
-
-            <div className="border-2 border-green m-[50px] w-[50%] h-auto rounded-[10px] bg-lightgray ">
-                {product && (
-                    <div className="m-[40px] inline-flex " >
-                        <img className="h-[80px] w-[80px] rounded-[5px] flex " src={product.img}/>
-                        <div className="m-[10px] p-[10px]">{product.name}</div>
-                        <div className="m-[10px] p-[10px] ">{product.price}</div>
-                    </div>
-                )}
             </div>
         </div>
     )

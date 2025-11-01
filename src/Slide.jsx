@@ -37,7 +37,7 @@ const Slide = () => {
     ];
 
     return (
-        <div className="fixed top-0 left-0 right-0 mx-[0px] z-[1000] bg-white rounded-[20px]">
+        <div className=" top-0 left-0 right-0 mx-[0px] z-[1000] bg-white rounded-[20px]">
             <div className="border border-lightslategray rounded-[20px] flex justify-between items-center px-2 shadow-[0px_1px_3px_1px_grey]">
 
                 <div>
@@ -47,13 +47,14 @@ const Slide = () => {
                         src="https://cdn-icons-png.flaticon.com/128/3917/3917215.png"
                     />
 
-                    <div className={`absolute top-0 left-0 right-0 h-screen w-full flex flex-col bg-black transform transition-transform duration-500 ease-out ${show ? "translate-y-0" : "-translate-y-full"}`}>
-                        {navItems.map((item, i) => (
-                            <Link
+                    <div className={`fixed top-0 left-0 right-0 h-screen w-full flex flex-col bg-black transform transition-transform duration-500 ease-out ${show ? "translate-y-0" : "-translate-y-full"}`}>          
+                        <div className="mt-[50px] "></div>              
+                        {navItems.map((item, i) => (                            
+                            <Link                            
                                 key={i}
                                 to={item.link}
-                                onClick={() => setShow(false)}
-                                className="border-1 border-solid border-gray-600 group flex items-center h-[60px]  p-5 mx-0 cursor-pointer hover:bg-gray-200 transition-colors">
+                                onClick={() => setShow(false)}                                
+                                className="border-1 border-solid border-b-gray-600  group flex items-center h-[60px]  p-5 mx-0 cursor-pointer hover:bg-gray-200 transition-colors">
                                 <img
                                     className="invert h-[30px] w-[30px] mr-3 transition-transform duration-500 ease-out group-hover:translate-y-0"
                                     src={item.icon}
