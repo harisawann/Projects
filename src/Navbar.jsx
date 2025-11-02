@@ -8,8 +8,8 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="fixed top-0 left-0 right-0 z-1000  bg-white rounded-[20px]  ">
-                <div className="border-lightslategray-1 rounded-[20px] flex justify-between items-center px-10 shadow-[0px_1px_3px_1px_grey] ">
+            <div className="fixed top-0 left-0 right-0 z-1000 bg-white rounded-[20px]  ">
+                <div className="border-lightslategray-1  rounded-[20px] flex justify-between items-center px-10 shadow-[0px_1px_3px_1px_grey] sticky">
 
 
                     <div className="inline-block" >
