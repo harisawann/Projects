@@ -24,7 +24,7 @@ const About = () => {
     <div>
 
       <div
-        className="mt-[120px] flex justify-self-center w-fit lg:text-[80px] text-[60px] font-sans ">
+        className="mt-[120px] flex justify-self-center text-center  lg:text-[80px] text-[60px] font-sans ">
         About Us
       </div>
 
