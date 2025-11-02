@@ -59,7 +59,7 @@ const Navbar = () => {
                                 alt="Contact"
                             />
                             <div className="font-normal block opacity-0 translate-y-[5px] transition ease-out duration-500 group-hover:opacity-100 group-hover:translate-y-0">
-                                Contact
+                                <Link to="/contact">Contact</Link>
                             </div>
                         </div>
 
@@ -82,7 +82,7 @@ const Navbar = () => {
                                 src="https://cdn-icons-png.flaticon.com/128/3916/3916598.png"
                                 alt="Cart" />
                             <div className="font-normal block opacity-0 translate-y-[5px] transition ease-out duration-500 group-hover:opacity-100 group-hover:translate-y-0">
-                                Cart
+                                <Link to="/cart">Cart</Link>
                             </div>
                         </div>
                     </div>

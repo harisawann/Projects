@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import Help from "./Help";
 import Navbar from "./Navbar";
 import Buy from "./Buy";
+import Contact from "./Contact"
 import Slide from "./Slide";
 import { useEffect, useState } from "react";
 
@@ -30,6 +31,7 @@ function App() {
         <Route path="/home" element={<><Menu /><Home /></>} />
         <Route path="/listing" element={<><Menu /><Listing /><Footer /></>} />
         <Route path="/about" element={<><Menu /><About /><Footer /></>} />
+        <Route path="/contact" element={<><Menu /><Contact /><Footer /></>} />
         <Route path="/help" element={<><Menu /><Help /><Footer /></>} />
         <Route path="/buy" element={<><Menu /><Buy /><Footer /></>} />
       </Routes>

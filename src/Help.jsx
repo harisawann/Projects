@@ -36,7 +36,7 @@ const Help = () => {
 
     return (
         <div>
-            <div className="text-[80px] mt-[90px] text-center font-sans">Help</div>
+            <div className="text-[60px] lg:text-[80px] mt-[90px] mb-[50px] text-center font-sans">Help</div>
             <div className=" mt-20 w-[80%] justify-self-center">
 
                 {faqs.map((faqs) =>
