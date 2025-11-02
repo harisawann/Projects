@@ -38,7 +38,7 @@ const Listing = () => {
 
     return (
         <div>
-            <div className=" text-[80px] text-center mt-20 font-sans ">Products</div>
+            <div className="text-[60px] lg:text-[80px] text-center mt-20 font-sans ">Products</div>
             <div className="lg:grid lg:grid-cols-4 grid grid-cols-2" >
                 {product.map((product, index) => (
                     <div key={index} className="my-2 mx-2 h-80 lg:h-103 inline-block lg:mx-5 lg:my-5 rounded-lg shadow-[0px_1px_3px_rgb(87,87,87)] ">
