@@ -8,6 +8,7 @@ import Navbar from "./Navbar";
 import Buy from "./Buy";
 import Contact from "./Contact"
 import Slide from "./Slide";
+import Cart from "./Cart"
 import { useEffect, useState } from "react";
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
         <Route path="/about" element={<><Menu /><About /><Footer /></>} />
         <Route path="/contact" element={<><Menu /><Contact /><Footer /></>} />
         <Route path="/help" element={<><Menu /><Help /><Footer /></>} />
+        <Route path="/cart" element={<><Menu /><Cart /><Footer /></>} />
         <Route path="/buy" element={<><Menu /><Buy /><Footer /></>} />
       </Routes>
     </>
